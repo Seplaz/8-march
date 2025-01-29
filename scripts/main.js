@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Дополнительная прокрутка на 100px вниз
     setTimeout(() => {
-      window.scrollBy({ top: 500, behavior: "smooth" });
+      window.scrollBy({ top: 200, behavior: "smooth" });
   }, 500); // Задержка для плавности
 
     // Если есть текст для кнопки, создаем кнопку
