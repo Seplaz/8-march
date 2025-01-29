@@ -5,20 +5,27 @@ function updateCurrentTime() {
   const currentTimeString = `${hours}:${minutes}`;
   document.getElementById("currentTime").textContent = currentTimeString;
 
-  
   const dayOfWeek = now.getDay();
-  const dayOfWeekString = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота"][dayOfWeek];
-  
+  const dayOfWeekString = [
+    "Воскресенье",
+    "Понедельник",
+    "Вторник",
+    "Среда",
+    "Четверг",
+    "Пятница",
+    "Суббота",
+  ][dayOfWeek];
+
   // Получаем дату месяца и форматируем её
   const monthDay = now.getDate();
   const monthDayString = String(monthDay).padStart(2, "0");
-  
+
   // Получаем название месяца
   const month = now.toLocaleDateString("ru-RU", { month: "short" });
-  
+
   // Формируем итоговую строку
   const currentDayString = `${dayOfWeekString}, ${monthDayString} ${month}`;
-  
+
   // Выводим результат
   document.getElementById("currentDay").textContent = currentDayString;
 }
@@ -80,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const buttonLink = document.createElement("a");
       buttonLink.className = "button__link";
 
-      const buttonDiv = document.createElement("button");
+      const buttonDiv = document.createElement("div");
       buttonDiv.className = "button";
 
       const buttonTextP = document.createElement("p");
@@ -118,7 +125,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (currentStep === 2) {
       // Второй шаг: добавляем ответ Кристины и новое сообщение
       addMessage("Кристина", "Извинись! Я тебя не узнала.", null);
-      addMessage("Кристина", "Как ты?", null)
+      addMessage("Кристина", "Как ты?", null);
       addMessage("Нюх-нюх", "Я в порядке!", null);
       addMessage("Нюх-нюх", "Хотел тебе кое-что сказать...", "И что же?");
       currentStep++;
@@ -140,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
       addMessage("Нюх-нюх", "Чеки вот...", null);
       addMessage("Нюх-нюх", "...а это вот!", "Что!?");
       currentStep++;
-    } 
+    }
     // Добавьте больше шагов по аналогии...
   }
 

@@ -1,53 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>С восьмым марта</title>
-  <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
-  <link rel="stylesheet" href="./styles/globals.css">
-  <link rel="stylesheet" href="./styles/style.css">
-</head>
-<body class="page">
-  <header class="header">
-
-    <div class="header__date">
-      <h1 class="header__title" id="currentTime"></h1>
-      <p class="header__text" id="currentDay"></p>
-    </div>
-
-    <div class="message unreadMessage">
-      <p class="content">У Вас одно непрочитанное сообщение...</p>
-    </div>
-
-    <a class="button__link" href="#main">
-      <button class="button startButton">
-        <span class="button__text">Прочитать</span>
-      </button>
-    </a>
-
-  </header>
-
-  <main class="main" id="main">
-
-    <div class="chat" id="chat">
-
-      <div class="message">
-        <div class="sender">Аноним</div>
-        <p class="content">Тук-тук!</p>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>С восьмым марта</title>
+    <link rel="shortcut icon" href="./images/favicon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/globals.css">
+    <link rel="stylesheet" href="./styles/style.css">
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__date">
+        <h1 class="header__title" id="currentTime">00:00</h1>
+        <p class="header__text" id="currentDay"></p>
       </div>
 
-      <a class="button__link" id="firstButton">
-        <button class="button">
-          <span class="button__text">Кто там?</span>
-        </button>
+      <div class="message unreadMessage">
+        <p class="content">У Вас одно непрочитанное сообщение...</p>
+      </div>
+
+      <a class="button__link" href="#main">
+        <div class="button startButton">
+          <span class="button__text">Прочитать</span>
+        </div>
       </a>
-    </div>
-    
-  </main>
-  <footer class="footer" id="footer">
-    <h3 class="footer__title">KUNIDEALER</h3>
-  </footer>
-  <script src="./scripts/main.js"></script>
-</body>
+    </header>
+
+    <main class="main" id="main">
+      <div class="chat" id="chat">
+        <div class="message">
+          <div class="sender">Аноним</div>
+          <p class="content">Тук-тук!</p>
+        </div>
+
+        <a class="button__link" id="firstButton">
+          <div class="button">
+            <span class="button__text">Кто там?</span>
+          </div>
+        </a>
+      </div>
+    </main>
+    <footer class="footer" id="footer">
+      <h3 class="footer__title">KUNIDEALER</h3>
+    </footer>
+    <script src="./scripts/main.js"></script>
+  </body>
 </html>
