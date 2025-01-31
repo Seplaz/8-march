@@ -53,6 +53,7 @@ html {
   display: none;
   flex-direction: column;
   padding: 32px;
+  block-size: min-content;
 }
 
 .chat {
@@ -92,8 +93,13 @@ html {
   block-size: min-content;
 }
 
+.header .button {
+  opacity: 0;
+  animation: fadeIn 1s 2s ease-out forwards;
+}
+
 .sender {
-  /* opacity: 0.6; */
+  opacity: 0.6;
   color: var(--color-darkpink);
   font-size: 0.875rem;
   text-shadow: none;
@@ -120,7 +126,9 @@ html {
   border: 8px solid var(--color-pink);
   padding: 16px;
   box-shadow: 4px 4px var(--color-darkpink);
+  opacity: 0;
   background-color: var(--color-lightpink);
+  animation: fadeIn 1s 1s ease-out forwards;
   cursor: pointer;
   max-inline-size: fit-content;
 }

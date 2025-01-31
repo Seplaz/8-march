@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     startButton.classList.add("fade-out");
     // Удаляем кнопку после завершения анимации
     startButton.addEventListener("animationend", () => {
-      startButton.remove();
+      // startButton.remove();
     });
   });
 
@@ -89,11 +89,11 @@ document.addEventListener("DOMContentLoaded", function () {
     chatContainer.appendChild(messageDiv);
 
     // Прокручиваем к последнему сообщению
-    messageDiv.scrollIntoView({ behavior: "smooth", block: "end" });
+    // messageDiv.scrollIntoView({ behavior: "smooth", block: "end" });
 
     // Дополнительная прокрутка на 100px вниз
     setTimeout(() => {
-      window.scrollBy({ top: 164, behavior: "smooth" });
+      window.scrollBy({ top: 320, behavior: "smooth" });
   }, 250); // Задержка для плавности
 
     // Если есть текст для кнопки, создаем кнопку
@@ -117,9 +117,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Добавляем класс для анимации исчезновения
         buttonLink.classList.add("fade-out");
 
-        // Удаляем кнопку после завершения анимации
+        // Скрываем элемент после завершения анимации
         buttonLink.addEventListener("animationend", () => {
-          buttonLink.remove();
+          // firstButton.remove();
         });
         handleButtonClick();
 
@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     firstButton.classList.add("fade-out");
     // Удаляем кнопку после завершения анимации
     firstButton.addEventListener("animationend", () => {
-      firstButton.remove();
+      // firstButton.remove();
     });
     handleButtonClick();
   });
