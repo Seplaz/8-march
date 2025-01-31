@@ -56,10 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
     footerContainer.style.display = "flex";
     scrollBy({ top: 500, behavior: "smooth" });
     startButton.classList.add("fade-out");
-    // Удаляем кнопку после завершения анимации
-    startButton.addEventListener("animationend", () => {
-      // startButton.remove();
-    });
   });
 
   // Функция для добавления нового сообщения и кнопки
@@ -88,13 +84,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Добавляем сообщение в чат
     chatContainer.appendChild(messageDiv);
 
-    // Прокручиваем к последнему сообщению
-    // messageDiv.scrollIntoView({ behavior: "smooth", block: "end" });
-
     // Дополнительная прокрутка на 100px вниз
     setTimeout(() => {
       window.scrollBy({ top: 320, behavior: "smooth" });
-  }, 250); // Задержка для плавности
+    }, 250); // Задержка для плавности
 
     // Если есть текст для кнопки, создаем кнопку
     if (buttonText) {
@@ -110,6 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       buttonDiv.appendChild(buttonTextP);
       buttonLink.appendChild(buttonDiv);
+      buttonDiv.classList.add("fade-in");
 
       // Добавляем обработчик события на новую кнопку
       buttonLink.addEventListener("click", function (event) {
@@ -117,10 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Добавляем класс для анимации исчезновения
         buttonLink.classList.add("fade-out");
 
-        // Скрываем элемент после завершения анимации
-        buttonLink.addEventListener("animationend", () => {
-          // firstButton.remove();
-        });
         handleButtonClick();
 
       });
@@ -181,10 +171,6 @@ document.addEventListener("DOMContentLoaded", function () {
   firstButton.addEventListener("click", function (event) {
     event.preventDefault(); // Предотвращаем стандартное поведение ссылки
     firstButton.classList.add("fade-out");
-    // Удаляем кнопку после завершения анимации
-    firstButton.addEventListener("animationend", () => {
-      // firstButton.remove();
-    });
     handleButtonClick();
   });
 });

@@ -69,7 +69,7 @@ html {
   gap: 4px;
   align-self: start;
   animation: fadeIn 1s ease-out forwards;
-  max-inline-size: 256px;
+  max-inline-size: 220px;
 }
 
 .header .message {
@@ -91,11 +91,6 @@ html {
   animation: scaling 0.5s 1.5s ease-out forwards;
   inline-size: min-content;
   block-size: min-content;
-}
-
-.header .button {
-  opacity: 0;
-  animation: fadeIn 1s 2s ease-out forwards;
 }
 
 .sender {
@@ -148,12 +143,17 @@ html {
   block-size: 100%;
 }
 
+.startButton {
+  opacity: 0;
+  animation: fadeIn 1s 2s ease-out forwards;
+}
+
 .align__right {
   align-self: end;
 }
 
 .fade-out {
-  animation: fadeOut 0.3s ease-out forwards;
+  animation: fadeOut 0.25s ease-out forwards;
   pointer-events: none;
 }
 
@@ -192,6 +192,7 @@ html {
     opacity: 1;
     transform: scale(1);
   }
+
   to {
     opacity: 0;
     transform: scale(0.9);
