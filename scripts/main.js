@@ -136,10 +136,10 @@ document.addEventListener("DOMContentLoaded", function () {
       currentStep++;
     } else if (currentStep === 2) {
       const messages = [
-        { sender: "Кристина", content: "Извинись! Я тебя не узнала.", buttonText: null },
-        { sender: "Кристина", content: "Как ты?", buttonText: null },
-        { sender: "Нюх-нюх", content: "Я в порядке!", buttonText: null },
-        { sender: "Нюх-нюх", content: "Хотел тебе кое-что сказать...", buttonText: "И что же?" },
+        { sender: "Кристина", content: "Ой, извинись! Я тебя не узнала.", buttonText: null },
+        { sender: "Нюх-нюх", content: "Ничего страшного!", buttonText: null },
+        { sender: "Нюх-нюх", content: "Сегодня как раз тот день...", buttonText: null },
+        { sender: "Нюх-нюх", content: "...когда все чудеса случаются!", buttonText: "Как?" },
       ];
 
       messages.forEach((msg, index) => {
@@ -151,8 +151,65 @@ document.addEventListener("DOMContentLoaded", function () {
       currentStep++;
     } else if (currentStep === 3) {
       const messages = [
-        { sender: "Кристина", content: "И что же?", buttonText: null },
-        { sender: "Нюх-нюх", content: "1749", buttonText: null },
+        { sender: "Кристина", content: "Нюх-нюх, как ты меня нашел?", buttonText: null },
+        { sender: "Нюх-нюх", content: "Интуиция, дорогая, интуиция!", buttonText: null },
+        { sender: "Нюх-нюх", content: "А еще желание поздравить тебя с 8 марта и пожелать море радости и счастья!", buttonText: "Спасибо!" },
+      ];
+
+      messages.forEach((msg, index) => {
+        setTimeout(() => {
+          addMessage(msg.sender, msg.content, msg.buttonText);
+        }, (index + 1) * 1000); // Задержка увеличивается на 1 секунду для каждого сообщения
+      });
+
+      currentStep++;
+    } else if (currentStep === 4) {
+      const messages = [
+        { sender: "Кристина", content: "Спасибо большое!", buttonText: null },
+        { sender: "Кристина", content: "А как ты сам?", buttonText: null },
+        { sender: "Нюх-нюх", content: "У меня всё отлично!", buttonText: "Мне приятно!" },
+      ];
+
+      messages.forEach((msg, index) => {
+        setTimeout(() => {
+          addMessage(msg.sender, msg.content, msg.buttonText);
+        }, (index + 1) * 1000); // Задержка увеличивается на 1 секунду для каждого сообщения
+      });
+
+      currentStep++;
+    } else if (currentStep === 5) {
+      const messages = [
+        { sender: "Кристина", content: "Ты даже не представляешь, как мне приятно!", buttonText: null },
+        { sender: "Кристина", content: "Этот день точно станет особенным.", buttonText: null },
+        { sender: "Нюх-нюх", content: "Точняк! Просто будь счастлива и дари радость другим.", buttonText: "Согласна!" },
+      ];
+
+      messages.forEach((msg, index) => {
+        setTimeout(() => {
+          addMessage(msg.sender, msg.content, msg.buttonText);
+        }, (index + 1) * 1000); // Задержка увеличивается на 1 секунду для каждого сообщения
+      });
+
+      currentStep++;
+    } else if (currentStep === 6) {
+      const messages = [
+        { sender: "Кристина", content: "Согласна!", buttonText: null },
+        { sender: "Кристина", content: "Ну что, Нюх-нюх, будем на связи?", buttonText: null },
+        { sender: "Нюх-нюх", content: "Конечно!", buttonText: null },
+        { sender: "Нюх-нюх", content: "До связи, Кристина! Пусть все твои мечты сбываются!", buttonText: "С праздником!" },
+      ];
+
+      messages.forEach((msg, index) => {
+        setTimeout(() => {
+          addMessage(msg.sender, msg.content, msg.buttonText);
+        }, (index + 1) * 1000); // Задержка увеличивается на 1 секунду для каждого сообщения
+      });
+
+      currentStep++;
+    } else if (currentStep === 7) {
+      const messages = [
+        { sender: "Кристина", content: "И тебе всего самого доброго! С праздником!", buttonText: null },
+        { sender: "Нюх-нюх", content: "С 8 марта, дорогая!", buttonText: null },
       ];
 
       messages.forEach((msg, index) => {
@@ -163,7 +220,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       currentStep++;
     }
-    // Аналогично для других шагов...
   }
 
   // Назначаем обработчик на первую кнопку

@@ -69,7 +69,8 @@ html {
   gap: 4px;
   align-self: start;
   animation: fadeIn 1s ease-out forwards;
-  max-inline-size: 220px;
+  min-inline-size: min-content;
+  max-inline-size: 84%;
 }
 
 .header .message {
@@ -125,7 +126,9 @@ html {
   background-color: var(--color-lightpink);
   animation: fadeIn 1s 1s ease-out forwards;
   cursor: pointer;
+  min-inline-size: fit-content;
   max-inline-size: fit-content;
+  text-align: center;
 }
 
 .button__text {
@@ -135,7 +138,7 @@ html {
 .button::before {
   content: "";
   position: absolute;
-  inset: 10px -50px;
+  inset: 20% -50px;
   background-image: url(../images/arrow_right_opt.svg);
   background-repeat: no-repeat;
   animation: slideRight 1s infinite ease-in-out;
