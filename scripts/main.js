@@ -33,8 +33,14 @@ function updateCurrentTime() {
 // Обновляем время сразу при загрузке страницы
 updateCurrentTime();
 
-// Затем обновляем каждую секунду
-setInterval(updateCurrentTime, 1000);
+const now = new Date();
+const delayUntilNextMinute = (60 - now.getSeconds()) * 1000;
+
+// Запускаем обновление через задержку и затем каждую минуту
+setTimeout(() => {
+  updateCurrentTime(); // Обновляем сразу в начале минуты
+  setInterval(updateCurrentTime, 60000); // Затем каждую минуту
+}, delayUntilNextMinute);
 
 document.addEventListener("DOMContentLoaded", function () {
   const mainContainer = document.getElementById("main");
@@ -49,6 +55,11 @@ document.addEventListener("DOMContentLoaded", function () {
     mainContainer.style.display = "flex"; // Показываем блок main
     footerContainer.style.display = "flex";
     scrollBy({ top: 500, behavior: "smooth" });
+    startButton.classList.add("fade-out");
+    // Удаляем кнопку после завершения анимации
+    startButton.addEventListener("animationend", () => {
+      startButton.remove();
+    });
   });
 
   // Функция для добавления нового сообщения и кнопки
@@ -82,8 +93,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Дополнительная прокрутка на 100px вниз
     setTimeout(() => {
-      window.scrollBy({ top: 200, behavior: "smooth" });
-  }, 500); // Задержка для плавности
+      window.scrollBy({ top: 164, behavior: "smooth" });
+  }, 250); // Задержка для плавности
 
     // Если есть текст для кнопки, создаем кнопку
     if (buttonText) {
@@ -103,8 +114,15 @@ document.addEventListener("DOMContentLoaded", function () {
       // Добавляем обработчик события на новую кнопку
       buttonLink.addEventListener("click", function (event) {
         event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+        // Добавляем класс для анимации исчезновения
+        buttonLink.classList.add("fade-out");
+
+        // Удаляем кнопку после завершения анимации
+        buttonLink.addEventListener("animationend", () => {
+          buttonLink.remove();
+        });
         handleButtonClick();
-        buttonLink.remove(); // Удаляем кнопку после нажатия
+
       });
 
       // Добавляем кнопку в чат
@@ -162,7 +180,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const firstButton = document.getElementById("firstButton");
   firstButton.addEventListener("click", function (event) {
     event.preventDefault(); // Предотвращаем стандартное поведение ссылки
+    firstButton.classList.add("fade-out");
+    // Удаляем кнопку после завершения анимации
+    firstButton.addEventListener("animationend", () => {
+      firstButton.remove();
+    });
     handleButtonClick();
-    firstButton.remove(); // Удаляем первую кнопку после нажатия
   });
 });
