@@ -17,7 +17,7 @@ html {
   padding: 0;
   color: var(--color-pink);
   font-family: "Press Start 2P", serif;
-  text-shadow: 1px 1px var(--color-darkpink);
+  text-shadow: 1.4px 1.4px var(--color-darkpink);
   background-color: var(--color-lightpink);
   background-image: url(../images/background.png);
   background-position: center;
@@ -132,7 +132,7 @@ html {
 }
 
 .button__text {
-  text-shadow: 1px 1px var(--color-darkpink);
+  text-shadow: 1.4px 1.4px var(--color-darkpink);
 }
 
 .button::before {
