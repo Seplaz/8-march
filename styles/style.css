@@ -70,7 +70,7 @@ html {
   align-self: start;
   animation: fadeIn 1s ease-out forwards;
   min-inline-size: min-content;
-  max-inline-size: 84%;
+  max-inline-size: fit-content;
 }
 
 .header .message {
@@ -123,12 +123,12 @@ html {
   padding: 16px;
   box-shadow: 4px 4px var(--color-darkpink);
   opacity: 0;
+  text-align: center;
   background-color: var(--color-lightpink);
   animation: fadeIn 1s 1s ease-out forwards;
   cursor: pointer;
   min-inline-size: fit-content;
   max-inline-size: fit-content;
-  text-align: center;
 }
 
 .button__text {
