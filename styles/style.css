@@ -45,8 +45,12 @@ html {
 }
 
 .header__title {
-  font-size: 2rem;
-  text-shadow: 3px 3px var(--color-darkpink);
+  font-size: 48px;
+  text-shadow: 2.5px 2.5px var(--color-darkpink);
+}
+
+.header__text {
+  font-size: 16px;
 }
 
 .main {
@@ -64,13 +68,13 @@ html {
 
 .message {
   position: relative;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   gap: 4px;
   align-self: start;
   animation: fadeIn 1s ease-out forwards;
-  min-inline-size: min-content;
-  max-inline-size: fit-content;
+  max-inline-size: 100%;
+  inline-size: fit-content;
 }
 
 .header .message {
@@ -97,7 +101,7 @@ html {
 .sender {
   opacity: 0.6;
   color: var(--color-darkpink);
-  font-size: 0.875rem;
+  font-size: 16px;
   text-shadow: none;
 }
 
@@ -132,6 +136,7 @@ html {
 }
 
 .button__text {
+  font-size: 16px;
   text-shadow: 1.4px 1.4px var(--color-darkpink);
 }
 
