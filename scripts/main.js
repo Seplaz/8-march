@@ -255,9 +255,22 @@ document.addEventListener("DOMContentLoaded", function () {
         { sender: "Кристина", content: "Сейчас загляну!", buttonText: null },
         { sender: "Нюх-нюх", content: "Надеюсь тебе понравится!", buttonText: null },
         { sender: "Нюх-нюх", content: "Кстатя говоря...", buttonText: null },
-        { sender: "Нюх-нюх", content: "Загляни ка по ссылке...", buttonText: null },
+        { sender: "Нюх-нюх", content: "Не закрывай эту страницу!", buttonText: null },
+        { sender: "Нюх-нюх", content: "Возвращайся и нажимай кнопку только после прохождения квеста!", buttonText: "Прошла!" },
+      ];
+
+      messages.forEach((msg, index) => {
+        setTimeout(() => {
+          addMessage(msg.sender, msg.content, msg.buttonText);
+        }, (index + 1) * 1000); // Задержка увеличивается на 1 секунду для каждого сообщения
+      });
+
+      currentStep++;
+    } else if (currentStep === 10) {
+      const messages = [
+        { sender: "Нюх-нюх", content: "А вот еще один подарочек...", buttonText: null },
         { sender: "Нюх-нюх", content: "ya.cc/t/RNB9WFtL6NQbwd", buttonText: null },
-        { sender: "Нюх-нюх", content: "А пароль ты узнаешь у меня.", buttonText: null },
+        { sender: "Нюх-нюх", content: "А пароль ты получила в финале квеста и еще можешь узнать у меня.", buttonText: null },
       ];
 
       messages.forEach((msg, index) => {
