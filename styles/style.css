@@ -109,8 +109,17 @@ html {
   border: 8px solid var(--color-pink);
   padding: 1rem;
   box-shadow: 4px 4px var(--color-darkpink);
-  line-height: 130%;
+  line-height: 150%;
   background-color: var(--color-lightpink);
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.content a {
+  color: var(--color-pink);
+  text-decoration: underline;
+  text-decoration-style: dashed;
+  text-underline-offset: 3px;
 }
 
 .button__link {

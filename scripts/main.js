@@ -76,7 +76,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const contentP = document.createElement("p");
     contentP.className = "content";
-    contentP.innerHTML = content;
+
+    if (content.includes("ya.cc")) {
+      const link = document.createElement("a");
+      link.href = "https://" + content; // Добавляем протокол для корректной работы ссылки
+      link.textContent = content;
+      link.target = "_blank"; // Открываем ссылку в новой вкладке
+      contentP.appendChild(link);
+    } else {
+      contentP.innerHTML = content;
+    }
 
     messageDiv.appendChild(senderDiv);
     messageDiv.appendChild(contentP);
@@ -244,7 +253,11 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (currentStep === 9) {
       const messages = [
         { sender: "Кристина", content: "Сейчас загляну!", buttonText: null },
-        { sender: "Кристина", content: "Надеюсь тебе понравится!", buttonText: null },
+        { sender: "Нюх-нюх", content: "Надеюсь тебе понравится!", buttonText: null },
+        { sender: "Нюх-нюх", content: "Кстатя говоря...", buttonText: null },
+        { sender: "Нюх-нюх", content: "Загляни ка по ссылке...", buttonText: null },
+        { sender: "Нюх-нюх", content: "ya.cc/t/RNB9WFtL6NQbwd", buttonText: null },
+        { sender: "Нюх-нюх", content: "А пароль ты узнаешь у меня.", buttonText: null },
       ];
 
       messages.forEach((msg, index) => {
