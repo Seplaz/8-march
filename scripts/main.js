@@ -139,9 +139,8 @@ document.addEventListener("DOMContentLoaded", function () {
         { sender: "Кристина", content: "Ой, извинись! Я тебя не узнала...", buttonText: null },
         { sender: "Кристина", content: "Что случилось?", buttonText: null },
         { sender: "Нюх-нюх", content: "Да так...", buttonText: null },
-        { sender: "Нюх-нюх", content: "Гулял, думал о жизни...", buttonText: null },
-        { sender: "Нюх-нюх", content: "В первую очередь о тебе!", buttonText: null },
-        { sender: "Нюх-нюх", content: "И вдруг понял...", buttonText: "Что понял?" },
+        { sender: "Нюх-нюх", content: "Гулял, думал о тебе и...", buttonText: null },
+        { sender: "Нюх-нюх", content: "И вдруг понял!", buttonText: "Что понял?" },
       ];
 
       messages.forEach((msg, index) => {
@@ -154,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (currentStep === 3) {
       const messages = [
         { sender: "Кристина", content: "Что понял?", buttonText: null },
-        { sender: "Нюх-нюх", content: "Что у меня есть любимое число.", buttonText: "Правда?" },
+        { sender: "Нюх-нюх", content: "Что сегодня особенный день!", buttonText: "Правда?" },
       ];
 
       messages.forEach((msg, index) => {
@@ -167,9 +166,9 @@ document.addEventListener("DOMContentLoaded", function () {
     } else if (currentStep === 4) {
       const messages = [
         { sender: "Кристина", content: "Правда?", buttonText: null },
-        { sender: "Кристина", content: "А что за число?", buttonText: null },
+        { sender: "Кристина", content: "А что за день?", buttonText: null },
         { sender: "Нюх-нюх", content: "Ну как же!", buttonText: null },
-        { sender: "Нюх-нюх", content: "1749!", buttonText: "Почему?" },
+        { sender: "Нюх-нюх", content: "Посмотри на календарь выше!", buttonText: "Ой" },
       ];
 
       messages.forEach((msg, index) => {
@@ -181,8 +180,10 @@ document.addEventListener("DOMContentLoaded", function () {
       currentStep++;
     } else if (currentStep === 5) {
       const messages = [
-        { sender: "Кристина", content: "Почему 1749?", buttonText: null },
-        { sender: "Нюх-нюх", content: "Потому что в связи с вот этими вот...", buttonText: "Ты ушел..." },
+        { sender: "Кристина", content: "Ой и правда...", buttonText: null },
+        { sender: "Кристина", content: "Сегодня же 8 марта!", buttonText: null },
+        { sender: "Нюх-нюх", content: "Да! И поэтому...", buttonText: null },
+        { sender: "Нюх-нюх", content: "Я поздравляю тебя с праздником!", buttonText: "Спасибо!" },
       ];
 
       messages.forEach((msg, index) => {
@@ -194,8 +195,13 @@ document.addEventListener("DOMContentLoaded", function () {
       currentStep++;
     } else if (currentStep === 6) {
       const messages = [
-        { sender: "Кристина", content: "Ты ушел сюда?", buttonText: null },
-        { sender: "Нюх-нюх", content: "Получается вот так..", buttonText: "А титаника..." },
+        { sender: "Кристина", content: "Спасибо большое мой дорогой Нюх-нюх!", buttonText: null },
+        { sender: "Нюх-нюх", content: "Желяю тебе быть всегда такой же...", buttonText: null },
+        { sender: "Нюх-нюх", content: "Милой...", buttonText: null },
+        { sender: "Нюх-нюх", content: "Обаятельной...", buttonText: null },
+        { sender: "Нюх-нюх", content: "Привлекательной...", buttonText: null },
+        { sender: "Нюх-нюх", content: "Хранительницей нашего уютного очага!", buttonText: null },
+        { sender: "Нюх-нюх", content: "С 8 марта тебя, Кристя!", buttonText: "Вау!" },
       ];
 
       messages.forEach((msg, index) => {
@@ -207,11 +213,10 @@ document.addEventListener("DOMContentLoaded", function () {
       currentStep++;
     } else if (currentStep === 7) {
       const messages = [
-        { sender: "Кристина", content: "А титаника вот так?", buttonText: null },
-        { sender: "Нюх-нюх", content: "Получается вот так..", buttonText: null },
-        { sender: "Нюх-нюх", content: "А я сидел вот так..", buttonText: null },
-        { sender: "Кристина", content: "Чеки вот...", buttonText: null },
-        { sender: "Нюх-нюх", content: "А это вот...", buttonText: "Смешно" },
+        { sender: "Кристина", content: "Вау, спасибо большое, Нюх-нюх!", buttonText: null },
+        { sender: "Кристина", content: "Ты меня смущаешь...", buttonText: null },
+        { sender: "Кристина", content: "Но я очень рада и благодарна!", buttonText: null },
+        { sender: "Нюх-нюх", content: "Это еще не все!", buttonText: "А что?" },
       ];
 
       messages.forEach((msg, index) => {
@@ -223,13 +228,10 @@ document.addEventListener("DOMContentLoaded", function () {
       currentStep++;
     } else if (currentStep === 8) {
       const messages = [
-        { sender: "Кристина", content: "Смешно :)", buttonText: null },
-        { sender: "Нюх-нюх", content: "Ага, старый мем :)", buttonText: null },
-        { sender: "Нюх-нюх", content: "В общем я решил заглянуть к тебе...", buttonText: null },
-        { sender: "Нюх-нюх", content: "Чтобы поздравить...", buttonText: null },
-        { sender: "Нюх-нюх", content: "С 8 марта, Кристина!", buttonText: null },
-        { sender: "Нюх-нюх", content: "Пусть сегодня твой день будет наполнен радостью, эмоциями и теплом!", buttonText: null },
-        { sender: "Нюх-нюх", content: "", buttonText: "Спасибо!" },
+        { sender: "Кристина", content: "А что еще?", buttonText: null },
+        { sender: "Нюх-нюх", content: "А еще...", buttonText: null },
+        { sender: "Нюх-нюх", content: "Загляни под стул на балконе...", buttonText: null },
+        { sender: "Нюх-нюх", content: "И действуй по инструкциям...", buttonText: "Ну ка..." },
       ];
 
       messages.forEach((msg, index) => {
@@ -241,8 +243,8 @@ document.addEventListener("DOMContentLoaded", function () {
       currentStep++;
     } else if (currentStep === 9) {
       const messages = [
-        { sender: "Кристина", content: "Ой, спасибо!", buttonText: null },
-        { sender: "Кристина", content: "Ты меня смущаешь...", buttonText: null },
+        { sender: "Кристина", content: "Сейчас загляну!", buttonText: null },
+        { sender: "Кристина", content: "Надеюсь тебе понравится!", buttonText: null },
       ];
 
       messages.forEach((msg, index) => {
