@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function () {
         { sender: "Нюх-нюх", content: "Желяю тебе быть всегда такой же...", buttonText: null },
         { sender: "Нюх-нюх", content: "Милой...", buttonText: null },
         { sender: "Нюх-нюх", content: "Обаятельной...", buttonText: null },
-        { sender: "Нюх-нюх", content: "Привлекательной...", buttonText: null },
+        { sender: "Нюх-нюх", content: "Привлекательной!", buttonText: null },
         { sender: "Нюх-нюх", content: "Хранительницей нашего уютного очага!", buttonText: null },
         { sender: "Нюх-нюх", content: "С 8 марта тебя, Кристя!", buttonText: "Вау!" },
       ];
